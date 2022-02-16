@@ -11,6 +11,14 @@ import { HeadingComponent } from './heading/heading.component';
 import { Course1Component } from './course/course1/course1.component';
 import { Course2Component } from './course/course2/course2.component';
 import { Course3Component } from './course/course3/course3.component';
+import { BlogComponent } from './blog/blog.component';
+import { TeacherComponent } from './teacher/teacher.component';
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { SigninComponent } from './signin/signin.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthServiceService } from './services/auth-service.service';
 
 @NgModule({
   declarations: [
@@ -22,13 +30,21 @@ import { Course3Component } from './course/course3/course3.component';
     HeadingComponent,
     Course1Component,
     Course2Component,
-    Course3Component
+    Course3Component,
+    BlogComponent,
+    TeacherComponent,
+    ContactComponent,
+    LoginComponent,
+    SigninComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

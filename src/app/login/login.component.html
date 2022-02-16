@@ -1,0 +1,17 @@
+
+<section class="login">
+    
+        <div class="row">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h3>s'inscrire</h3>
+            <input type="text" name="firstname" id="firstname" placeholder="entrez votre nom" class="box"  formControlName="firstname">
+            <input type="text" name="lastname" id="lastname" placeholder="entrez votre prénom" class="box" formControlName="lastname">
+            <input type="number" name="phone" placeholder="téléphone"  id="phone" class="box" formControlName="phone">
+            <input type="email" class="box" placeholder="adresse email" name="email" id="email" formControlName="email">
+            <input type="text" name="password" id="password" placeholder="entrez votre password" class="box" formControlName="password">
+            <input type="text" name="passwordf" id="passwordf" placeholder="confirme password" class="box" formControlName="passwordf">
+            <input type="submit" value="S'inscrire" class="btn" [disabled]="loginForm.invalid">
+        </form>
+        <p style="font-size: 2rem;color: red;">{{errorMessage}}</p>
+       </div>
+    </section>
